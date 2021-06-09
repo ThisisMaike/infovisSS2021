@@ -9,6 +9,7 @@ library(tidyverse)
 library(colorspace)
 library(ggthemes)
 library(psych)
+library(cowplot)
 ```
 
 
@@ -94,6 +95,9 @@ movies_with_profitability %>%
   plot_annotation(title = "Bechdel Test: A Comparison among genre, big budget movies and the Harry Potter Series")
 
 
+ggsave(myplot1, filename = "Bechdel_Genres.png")
+ggsave(myplot2, filename = "Bechdel_Potter.png")
+ggsave(myplot3, filename = "Bechdel_BigBudget.png")
 
 ```
 
@@ -111,6 +115,7 @@ library(patchwork)
 
 (plot_1 + plot_2) / plot_2 +
   plot_annotation(title = "My work")
+
 ```
 
 
